@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector - Novelas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="reader-page">
+    <!-- Barra de navegación superior fija -->
+    <nav class="reader-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-back"><span class="material-symbols-rounded">arrow_back</span></a>
+            <h1 id="reader-title" class="reader-title"></h1>
+            <button id="settings-btn" class="nav-settings" aria-label="Configuración">Aa</button>
+        </div>
+    </nav>
+
+    <!-- Panel de configuración (oculto por defecto) -->
+    <div id="settings-panel" class="settings-panel hidden">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h3>Configuración</h3>
+                <button id="settings-close" class="close-btn" aria-label="Cerrar">✕</button>
+            </div>
+            
+            <div class="setting-group">
+                <label>Tema</label>
+                <div class="button-group theme-group">
+                    <button class="setting-btn" data-theme="light">Claro</button>
+                    <button class="setting-btn" data-theme="dark">Oscuro</button>
+                    <button class="setting-btn" data-theme="sepia">Sepia</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Fuente</label>
+                <div class="button-group">
+                    <button class="setting-btn" data-font="serif">Serif</button>
+                    <button class="setting-btn" data-font="sans">Sans</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Tamaño de texto</label>
+                <div class="button-group">
+                    <button id="font-decrease" class="setting-btn">−</button>
+                    <span id="font-size-display">100%</span>
+                    <button id="font-increase" class="setting-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor principal de lectura -->
+    <div class="reader-container">
+        <article id="reader-content" class="reader-content">
+            <!-- Selector de versiones (tabs) -->
+            <div id="version-selector" class="version-selector hidden"></div>
+
+            <!-- Contenido de texto -->
+            <div id="text-content" class="text-content">
+                <p class="loading">Cargando contenido...</p>
+            </div>
+
+            <!-- Botón para cargar siguiente sección -->
+            <div id="next-section-container" class="next-section-container hidden">
+                <button id="load-next-btn" class="load-next-btn">
+                    Continuar a la siguiente sección →
+                </button>
+            </div>
+        </article>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Inicializar el lector cuando cargue la página
+        if (typeof NovelReader !== 'undefined') {
+            NovelReader.initReader();
+        }
+    </script>
+</body>
+</html>

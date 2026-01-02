@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice - Lector de Novelas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="index-page">
+    <div class="container">
+        <header class="main-header">
+            <h1 id="novel-title">Cargando...</h1>
+            <p class="author" id="novel-author"></p>
+        </header>
+
+        <main class="index-content">
+            <div id="chapter-list" class="chapter-list">
+                <!-- El contenido se generará dinámicamente -->
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>Lector Web de Novelas - Jamstack Static Reader</p>
+        </footer>
+    </div>
+
+    <!-- Botón flotante para temas -->
+    <button id="theme-cycle-btn" class="fab" aria-label="Cambiar tema">🎨</button>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Inicializar el índice cuando cargue la página
+        if (typeof NovelReader !== 'undefined') {
+            NovelReader.initIndex();
+        }
+    </script>
+</body>
+</html>

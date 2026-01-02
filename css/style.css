@@ -1,0 +1,644 @@
+/* ========================================
+   VARIABLES CSS Y TEMAS (MATERIAL DESIGN 3)
+   ======================================== */
+
+:root {
+    /* Tipografía MD3 */
+    --font-sans: 'Roboto Flex', sans-serif;
+    --font-serif: 'Roboto Slab', serif;
+    --base-font-size: 16px; /* MD3 base */
+
+    /* Roles de color (Light Theme) */
+    --primary: #3f3f3f;
+    --on-primary: #FFFFFF;
+    --primary-container: #EADDFF;
+    --on-primary-container: #a5a5a5;
+    --secondary: #a0a0a0; /* A neutral gray */
+    --on-secondary: #FFFFFF;
+    --secondary-container: #E8E8EA; /* Lighter gray */
+    --on-secondary-container: #1C1B1F; /* Darker text */
+    --tertiary: #7D5260;
+    --on-tertiary: #FFFFFF;
+    --tertiary-container: #ffffff;
+    --on-tertiary-container: #31111D;
+    --error: #B3261E;
+    --on-error: #FFFFFF;
+    --error-container: #F9DEDC;
+    --on-error-container: #410E0B;
+    --background: #FFFBFE;
+    --on-background: #1C1B1F;
+    --surface: #FFFBFE;
+    --on-surface: #1C1B1F;
+    --surface-variant: #E7E0EC;
+    --on-surface-variant: #49454F;
+    --outline: #79747E;
+    --shadow: #000000;
+    --surface-tint-color: var(--primary);
+
+    /* Mapeo a variables antiguas para compatibilidad inicial */
+    --bg-color: var(--surface);
+    --text-color: var(--on-surface);
+    --secondary-text: var(--on-surface-variant);
+    --border-color: var(--outline);
+    --hover-bg: rgba(0, 0, 0, 0.08); /* State layers */
+    --nav-bg: rgba(255, 251, 254, 0.95);
+    --nav-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Oscuro (Dark Theme) */
+body[data-theme="dark"] {
+    --primary: #636363;
+    --on-primary: #FFFFFF;
+    --primary-container: #E8E8EA;
+    --on-primary-container: #1C1B1F;
+    --secondary: #3f3f3f; /* A light neutral gray */
+    --on-secondary: #FFFFFF;
+    --secondary-container: #fafafa; /* Darker gray */
+    --on-secondary-container: #a5a5a5; /* Lighter text */
+    --tertiary: #FFFBFE;
+    --on-tertiary: #1C1B1F;
+    --tertiary-container: #633B48;
+    --on-tertiary-container: #FFD8E4;
+    --error: #F2B8B5;
+    --on-error: #601410;
+    --error-container: #8C1D18;
+    --on-error-container: #F9DEDC;
+    --background: #1C1B1F;
+    --on-background: #E6E1E5;
+    --surface: #1C1B1F;
+    --on-surface: #E6E1E5;
+    --surface-variant: #49454F;
+    --on-surface-variant: #CAC4D0;
+    --outline: #938F99;
+    --hover-bg: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(28, 27, 31, 0.95);
+    --nav-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Tema Sepia */
+body[data-theme="sepia"] {
+    --primary: #795548;
+    --on-primary: #FFFFFF;
+    --primary-container: #D7CCC8;
+    --on-primary-container: #2c1d1a;
+    --background: #F5EFE6;
+    --on-background: #4E443A;
+    --surface: #F5EFE6;
+    --on-surface: #4E443A;
+    --surface-variant: #D7CCC8;
+    --on-surface-variant: #5D4037;
+    --outline: #A1887F;
+    --hover-bg: rgba(78, 68, 58, 0.08);
+    --nav-bg: rgba(245, 239, 230, 0.95);
+    --nav-shadow: rgba(92, 75, 55, 0.1);
+}
+
+/* ========================================
+   ESTILOS GLOBALES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans); /* Default to sans-serif for UI */
+    font-size: var(--base-font-size);
+    line-height: 1.5;
+    color: var(--on-background);
+    background-color: var(--background);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-font="serif"] .reader-content {
+    font-family: var(--font-serif);
+}
+body[data-font="serif"] .text-content p {
+    font-family: var(--font-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+/* ========================================
+   PÁGINA DE ÍNDICE
+   ======================================== */
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--outline);
+}
+
+.main-header h1 {
+    font-size: 32px; /* Headline Large */
+    line-height: 40px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.author {
+    color: var(--on-surface-variant);
+    font-size: 16px; /* Body Large */
+    font-style: italic;
+}
+
+/* Lista de capítulos */
+.chapter-list {
+    margin-bottom: 3rem;
+}
+
+.chapter-item {
+    background-color: var(--surface);
+    border: 1px solid var(--outline);
+    border-radius: 12px; /* MD3 card radius */
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.chapter-item:hover {
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.15), 0 1px 2px 0 rgba(0,0,0,0.3);
+}
+
+.chapter-title {
+    font-size: 22px; /* Title Large */
+    line-height: 28px;
+    font-weight: 500;
+    color: var(--on-surface);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chapter-title:hover {
+    background-color: var(--hover-bg);
+}
+
+.chapter-title::after {
+    content: '+';
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--on-surface-variant);
+    transition: transform 0.3s ease;
+}
+
+.chapter-title.active {
+    background-color: transparent;
+}
+
+.chapter-title.active::after {
+    transform: rotate(45deg);
+}
+
+.parts-container {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, border 0.2s linear;
+    padding: 0 1.5rem;
+    border-top: 1px solid transparent;
+}
+
+.parts-container:not(.collapsed) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid var(--outline);
+}
+
+.parts-container.collapsed {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.part-item {
+    margin-top: 1rem;
+}
+
+.part-item:first-child {
+    margin-top: 0;
+}
+
+.part-title {
+    font-size: 16px; /* Body Large */
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--on-surface);
+}
+
+.section-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-item {
+    margin-bottom: 0.25rem;
+}
+
+.section-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    border-radius: 20px; /* Pill shape */
+    transition: background-color 0.2s ease;
+}
+
+.section-link:hover {
+    background-color: var(--hover-bg);
+    color: var(--on-surface);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--outline);
+    color: var(--on-surface-variant);
+    font-size: 14px; /* Label Large */
+}
+
+/* ========================================
+   BARRA DE NAVEGACIÓN DEL LECTOR
+   ======================================== */
+
+.reader-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--outline);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    max-width: 900px;
+    height: 64px; /* MD3 Top App Bar height */
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reader-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px; /* Title Large */
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    color: var(--on-surface);
+}
+
+.nav-back, .nav-settings {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-back:hover, .nav-settings:hover {
+    background-color: var(--hover-bg);
+}
+
+.nav-settings {
+    font-size: 1.5rem; /* Icon size */
+}
+
+/* ========================================
+   PANEL DE CONFIGURACIÓN (MD3 Side Sheet)
+   ======================================== */
+
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    background: var(--surface);
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,0.2), 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12);
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-left: 1px solid var(--outline);
+}
+
+.settings-panel:not(.hidden) {
+    transform: translateX(0);
+}
+
+.settings-content {
+    padding: 1.5rem;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--outline);
+}
+
+.settings-header h3 {
+    font-size: 22px; /* Title Large */
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.setting-group {
+    margin-bottom: 2rem;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 14px; /* Label Large */
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* MD3 Filled Tonal Button / Segmented Button style */
+.setting-btn {
+    flex-grow: 1;
+    min-width: 60px;
+    height: 40px;
+    padding: 0 1.5rem;
+    background: var(--secondary-container);
+    border: 1px solid var(--secondary-container);
+    color: var(--on-secondary-container);
+    border-radius: 20px; /* Full pill shape */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-btn:hover {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.setting-btn.active {
+    background: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+}
+
+#font-size-display {
+    padding: 0 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--on-surface);
+}
+
+/* ========================================
+   CONTENEDOR DEL LECTOR
+   ======================================== */
+
+.reader-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.reader-content {
+    margin-bottom: 3rem;
+}
+
+/* Version selector as MD3 Segmented Buttons */
+.version-selector {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--outline);
+}
+
+.version-btn {
+    flex-grow: 1;
+    height: 48px;
+    padding: 0 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.version-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.version-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+/* Contenido de texto */
+.text-content {
+    margin-bottom: 3rem;
+}
+
+.text-content p {
+    font-size: var(--base-font-size);
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+.text-content p.loading {
+    text-align: center;
+    color: var(--on-surface-variant);
+    font-style: italic;
+}
+
+/* Separador entre secciones */
+.section-divider {
+    margin: 4rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--outline);
+}
+
+.section-divider h3 {
+    font-size: 22px; /* Title Large */
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--on-surface);
+}
+
+/* Botón de siguiente sección (MD3 Filled Button) */
+.next-section-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.load-next-btn {
+    height: 40px;
+    padding: 0 24px;
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.load-next-btn:hover {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.3), 0 4px 5px 0 rgba(0,0,0,0.15), 0 1px 10px 0 rgba(0,0,0,0.12);
+}
+
+.load-next-btn:disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+
+.hidden {
+    display: none !important;
+}
+
+/* Botón Flotante (FAB) (MD3) */
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px; /* MD3 FAB radius */
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+    border: none;
+    box-shadow: 0 4px 8px 3px rgba(0,0,0,0.15), 0 1px 3px 0 rgba(0,0,0,0.3);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: all 0.2s ease;
+}
+
+.fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px 4px rgba(0,0,0,0.15), 0 2px 3px 0 rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .container,
+    .reader-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .main-header h1 {
+        font-size: 28px;
+    }
+
+    .chapter-title {
+        font-size: 20px;
+    }
+
+    .part-title {
+        font-size: 16px;
+    }
+
+    .settings-panel {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        height: 56px;
+        padding: 0 0.5rem;
+    }
+    
+    .reader-title {
+        font-size: 18px;
+    }
+
+    .fab {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
