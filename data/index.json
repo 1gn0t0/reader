@@ -1,92 +1,90 @@
 {
-  "meta": {
-    "title": "La Espada del Amanecer",
-    "author": "Kenji Yamamoto"
-  },
-  "structure": [
-    {
-      "id": "cap_1",
-      "title": "Capítulo 1: El Despertar",
-      "parts": [
-        {
-          "id": "c1_p1",
-          "title": "Parte 1: La Aldea Olvidada",
-          "sections": [
-            {
-              "id": "c1_p1_sA",
-              "subtitle": "El amanecer gris",
-              "versions": [
-                {
-                  "id": "v1",
-                  "label": "Trad. Fansub",
-                  "file_path": "content/c1/sA_v1.txt"
-                },
-                {
-                  "id": "v2",
-                  "label": "Trad. Oficial",
-                  "file_path": "content/c1/sA_v2.txt"
-                }
-              ]
-            },
-            {
-              "id": "c1_p1_sB",
-              "subtitle": "El encuentro",
-              "versions": [
-                {
-                  "id": "v1",
-                  "label": "Trad. Fansub",
-                  "file_path": "content/c1/sB_v1.txt"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "c1_p2",
-          "title": "Parte 2: El Llamado",
-          "sections": [
-            {
-              "id": "c1_p2_sA",
-              "subtitle": "La decisión",
-              "versions": [
-                {
-                  "id": "v1",
-                  "label": "Trad. Fansub",
-                  "file_path": "content/c1/p2_sA_v1.txt"
-                },
-                {
-                  "id": "v2",
-                  "label": "Trad. Oficial",
-                  "file_path": "content/c1/p2_sA_v2.txt"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+    "meta": {
+        "title": "Taimanin RPG",
+        "author": "Lilith-soft"
     },
-    {
-      "id": "cap_2",
-      "title": "Capítulo 2: El Viaje Comienza",
-      "parts": [
+    "structure": [
         {
-          "id": "c2_p1",
-          "title": "Parte 1: La Partida",
-          "sections": [
-            {
-              "id": "c2_p1_sA",
-              "subtitle": "Adiós a casa",
-              "versions": [
+            "id": "CHAPTER001",
+            "title": "Capítulo 1: Rebelión",
+            "title_raw": "反乱",
+            "parts": [
                 {
-                  "id": "v1",
-                  "label": "Trad. Fansub",
-                  "file_path": "content/c2/sA_v1.txt"
+                    "id": "CHAPTER001_P1",
+                    "title": "Parte 1",
+                    "sections": [
+                        {
+                            "id": "CHAPTER001_P1_SA",
+                            "subtitle": "Sección A",
+                            "versions": [
+                                {
+                                    "id": "GEM3PROPrev_V1",
+                                    "label": "Trad. 1",
+                                    "file_path": "content/CHAPTER001/P1/SA/GEM3PROPrev_V1.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V2",
+                                    "label": "Trad. 2",
+                                    "file_path": "content/CHAPTER001/P1/SA/GEM3PROPrev_V2.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V3",
+                                    "label": "Trad. 3",
+                                    "file_path": "content/CHAPTER001/P1/SA/GEM3PROPrev_V3.txt"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "CHAPTER001_P1_SB",
+                            "subtitle": "Sección B",
+                            "versions": [
+                                {
+                                    "id": "GEM3PROPrev_V1",
+                                    "label": "Trad. 1",
+                                    "file_path": "content/CHAPTER001/P1/SB/GEM3PROPrev_V1.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V2",
+                                    "label": "Trad. 2",
+                                    "file_path": "content/CHAPTER001/P1/SB/GEM3PROPrev_V2.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V3",
+                                    "label": "Trad. 3",
+                                    "file_path": "content/CHAPTER001/P1/SB/GEM3PROPrev_V3.txt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "CHAPTER001_P2",
+                    "title": "Parte 2",
+                    "sections": [
+                        {
+                            "id": "CHAPTER001_P2_SA",
+                            "subtitle": "Sección A",
+                            "versions": [
+                                {
+                                    "id": "GEM3PROPrev_V1",
+                                    "label": "Trad. 1",
+                                    "file_path": "content/CHAPTER001/P2/SA/GEM3PROPrev_V1.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V2",
+                                    "label": "Trad. 2",
+                                    "file_path": "content/CHAPTER001/P2/SA/GEM3PROPrev_V2.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V3",
+                                    "label": "Trad. 3",
+                                    "file_path": "content/CHAPTER001/P2/SA/GEM3PROPrev_V3.txt"
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
