@@ -104,6 +104,54 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "CHAPTER001_P3",
+                    "title": "Parte 3",
+                    "sections": [
+                        {
+                            "id": "CHAPTER001_P3_SA",
+                            "subtitle": "Sección A",
+                            "versions": [
+                                {
+                                    "id": "GEM3PROPrev_V1",
+                                    "label": "Trad. 1",
+                                    "file_path": "content/CHAPTER001/P3/SA/GEM3PROPrev_V1.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V2",
+                                    "label": "Trad. 2",
+                                    "file_path": "content/CHAPTER001/P3/SA/GEM3PROPrev_V2.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V3",
+                                    "label": "Trad. 3",
+                                    "file_path": "content/CHAPTER001/P3/SA/GEM3PROPrev_V3.txt"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "CHAPTER001_P3_SB",
+                            "subtitle": "Sección B",
+                            "versions": [
+                                {
+                                    "id": "GEM3PROPrev_V1",
+                                    "label": "Trad. 1",
+                                    "file_path": "content/CHAPTER001/P3/SB/GEM3PROPrev_V1.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V2",
+                                    "label": "Trad. 2",
+                                    "file_path": "content/CHAPTER001/P3/SB/GEM3PROPrev_V2.txt"
+                                },
+                                {
+                                    "id": "GEM3PROPrev_V3",
+                                    "label": "Trad. 3",
+                                    "file_path": "content/CHAPTER001/P3/SB/GEM3PROPrev_V3.txt"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
